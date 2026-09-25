@@ -23,3 +23,16 @@ fun my-encryptor2(b :: String) -> String:
 end
 
 support.test-encryptor2(my-encryptor2)
+
+#Encryptor 3
+support.encryptor3("hello world")
+support.encryptor3("HELLO WORLD")
+support.encryptor3('Are you doing anything at all?')
+
+#Observation - just print the string
+
+fun my-encryptor3(c :: String) -> String:
+  c
+end
+
+support.test-encryptor3(my-encryptor3)
