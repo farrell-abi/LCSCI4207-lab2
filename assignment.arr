@@ -55,9 +55,33 @@ support.encryptor5('hello world')
 support.encryptor5('great')
 support.encryptor5('chippy')
 
-fun my-encryptor5(e :: String) -> String:
-  string-replace(e, 'a', 'b')
-  string-replace(e, 'e', 'f')
-  srting-replace(e, 'i', 'j')
-  string-replace(e, 'o', 'p')
-end
+#fun my-encryptor5(e :: String) -> String:
+#  string-replace(e, 'a', 'b')
+# string-replace(e, 'e', 'f')
+# srting-replace(e, 'i', 'j')
+#  string-replace(e, 'o', 'p')
+#end
+
+#Encryptor 6
+support.encryptor6('Hello World')
+support.encryptor6('RRRRRRR')
+support.encryptor6("The quick brown fox jumps over the lazy dog.")
+#Obervation all lowercase + remove 'r'
+
+
+#Encyrptor 7
+support.encryptor7('Hello World')
+#observation = string contains
+
+#Encryptor 8
+support.encryptor8("Hello World")
+#observation add 3! and repeat X3
+
+#Encryptor 9
+support.encryptor9('Hello World')
+support.encryptor9('what')
+support.encryptor9('love')
+
+
+#Encryptor 10
+
