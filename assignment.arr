@@ -34,8 +34,8 @@ support.encryptor3('what do i need to write')
 #Observation - just print the string
 
 fun my-encryptor3(c :: String) -> String:
-  doc: "this lowkey just doesn't do anything i dont think"
-  c
+  doc: "this lowkey just doesn't do anything i don't think"
+  string-replace(c, ".", "!")
 end
 
 support.test-encryptor3(my-encryptor3)
@@ -55,35 +55,73 @@ support.encryptor5('hello world')
 support.encryptor5('great')
 support.encryptor5('chippy')
 
-#fun my-encryptor5(e :: String) -> String:
-#  string-replace(e, 'a', 'b')
-# string-replace(e, 'e', 'f')
-# srting-replace(e, 'i', 'j')
-#  string-replace(e, 'o', 'p')
-#end
+fun my-encryptor5(e :: String) -> String:
+  e1 = string-replace(e, 'a', 'b')
+  e2 = string-replace(e1, 'e', 'f')
+  e3 = string-replace(e2, 'i', 'j')
+  e4 = string-replace(e3, 'o', 'p')
+  e5 = string-replace(e4, 'u', 'v')
+  e6 = string-replace(e5, "A", "B")
+  e7 = string-replace(e6, 'E', "F")
+  e8 = string-replace(e7, 'I', 'J')
+  e9 = string-replace(e8, "O", "P")
+  string-replace(e9, "U", "V")
+end
+
+support.test-encryptor5(my-encryptor5)
 
 #Encryptor 6
 support.encryptor6('Hello World')
 support.encryptor6('RRRRRRR')
 support.encryptor6("The quick brown fox jumps over the lazy dog.")
 #Obervation all lowercase + remove 'r'
+fun my-encryptor6(f :: String) -> String:
+  string-replace(string-to-lower(f), "r", "")
+end
 
+support.test-encryptor6(my-encryptor6)
 
 #Encyrptor 7
 support.encryptor7('Hello World')
 #observation = string contains
+fun my-encryptor7(g :: String) -> Number:
+  string-length(g)
+end
+
+support.test-encryptor7(my-encryptor7)
 
 #Encryptor 8
 support.encryptor8("Hello World")
 #observation add 3! and repeat X3
+fun my-encryptor8(h :: String) -> String:
+  string-repeat(string-append(h, "!!!"), 3)
+end
+
+support.test-encryptor8(my-encryptor8)
 
 #Encryptor 9
 support.encryptor9('Hello World')
 support.encryptor9('what')
 support.encryptor9('love')
+support.encryptor9("Number")
+support.encryptor9("What gets zero?")
 
+fun my-encryptor9(i :: String) -> Number:
+  string-to-code-point(string-char-at(i, 0))
+end
+
+support.test-encryptor9(my-encryptor9)
 
 #Encryptor 10
 support.encryptor10("Hello World")
 support.encryptor10("HELLO WORLD")
 #observation = all lowercase, subsrting (0, 4), replace vowels with next letter
+
+fun my-encryptor10(j :: String) -> String:
+  a = my-encryptor1(j)
+  b = my-encryptor6(a)
+  c = my-encryptor5(b)
+  my-encryptor4(c)
+end
+
+support.test-encryptor10(my-encryptor10)
