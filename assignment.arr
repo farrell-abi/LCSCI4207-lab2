@@ -84,4 +84,6 @@ support.encryptor9('love')
 
 
 #Encryptor 10
-
+support.encryptor10("Hello World")
+support.encryptor10("HELLO WORLD")
+#observation = all lowercase, subsrting (0, 4), replace vowels with next letter
